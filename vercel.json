@@ -1,13 +1,13 @@
-{
-    "version": 2,
-    "builds": [
-      { "src": "requirements.txt", "use": "@vercel/python" }
-    ],
+
+    "builds": [{
+        "src": "Narayannaik/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }],
     "routes": [
-      { "src": "/(.*)", "dest": "manage.py" }
-    ],
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "Narayannaik.settings"
-    }
-  }
-  
+        {
+            "src": "/(.*)",
+            "dest": "Narayannaik/wsgi.py"
+        }
+    ]
+}
