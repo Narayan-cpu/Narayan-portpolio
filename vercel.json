@@ -9,12 +9,6 @@
             "src": "/(.*)",
             "dest": "Narayannaik/wsgi.py"
         },
-        {
-  "functions": {
-    "api/**/*.py": {
-      "maxDuration": 60
-    }
-  }
-},
+
     ]
 }
