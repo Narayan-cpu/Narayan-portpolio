@@ -15,7 +15,7 @@
     "api/**/*.py": {
       "maxDuration": 60
     }
-  ]
+  ],
       
     
 }
