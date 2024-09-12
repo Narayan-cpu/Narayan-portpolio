@@ -1,0 +1,166 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block content %}
+{% load static %} 
+<section class=" about-section py-12 bg-gray-100 my-12">
+  <div class="container mx-auto text-center ">
+    <h2 class="text-4xl font-bold text-gray-800 mb-6 animated-heading hover-heading" style="color:#E2725B;">About Me</h2>
+    
+    <p class="text-xl text-gray-600 mb-4 animated-paragraph hover-paragraph">
+      I am a dedicated software engineer with a <strong>BE in CSE (Data Science)</strong>, specializing in 
+      <span class="text-blue-500">Python, Java, and C</span>. I have expertise in building web applications using 
+      <span class="text-blue-500">Django</span> and managing cloud infrastructure with <span class="text-blue-500">AWS Cloud</span>.
+    </p>
+    
+    <p class="text-xl text-gray-600 mb-4 animated-paragraph hover-paragraph">
+      My focus lies in creating scalable solutions and exploring the intersection of data science and cloud computing. 
+      I thrive on solving complex problems, contributing to tech communities, and constantly learning new technologies.
+    </p>
+    
+    <p class="text-xl text-gray-600 animated-paragraph hover-paragraph">
+      When I'm not coding, you'll find me researching AI trends or working on open-source projects. 
+      Let's build something amazing together!
+    </p>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Adding animation on scroll
+    const headings = document.querySelectorAll('.animated-heading');
+    const paragraphs = document.querySelectorAll('.animated-paragraph');
+    
+    // Animate heading
+    headings.forEach((heading) => {
+      heading.classList.add('fade-in-top');
+    });
+    
+    // Animate paragraphs
+    paragraphs.forEach((paragraph, index) => {
+      setTimeout(() => {
+        paragraph.classList.add('fade-in-left');
+      }, index * 300);
+    });
+  });
+</script>
+
+<style>
+  .about-section {
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+  }
+
+  /* Animation styles */
+  .fade-in-top {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInTop 1s ease forwards;
+  }
+
+  .fade-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 1s ease forwards;
+  }
+
+  @keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Hover effect for heading */
+  h2:hover {
+    color: blue; /* Blue color on hover */
+    transform: scale(1.1); /* Slightly increase size */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  /* Hover effect for paragraphs */
+  .hover-paragraph:hover {
+    color: blue; /* Blue color on hover */
+    letter-spacing: 1px; /* Add letter spacing */
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+  }
+
+
+
+  .tech-stack {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+/* Icon styling */
+.tech-stack i {
+    font-size: 64px;  /* Larger size */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.tech-stack i:hover {
+    transform: scale(1.2);  /* Slightly enlarge on hover */
+    cursor: pointer;
+}
+</style>
+
+
+</style> 
+<section class="tech-section">
+  <h2 class="text-center">Technologies I Work</h2>
+  <div class="tech-stack">
+      <!-- Icons for each technology -->
+      <i class="devicon-python-plain colored"></i>
+      <i class="devicon-java-plain colored"></i>
+      <i class="devicon-c-plain colored"></i>
+      <i class="devicon-html5-plain colored"></i>
+      <i class="devicon-css3-plain colored"></i>
+      <i class="devicon-javascript-plain colored"></i>
+      <i class="devicon-django-plain colored"></i>
+      <i class="devicon-amazonwebservices-plain colored"></i>
+    
+      <i class="devicon-canva-original colored"></i>  
+      <i class="devicon-figma-plain colored"></i>
+      <i class="devicon-git-plain"></i>
+      <i class="devicon-github-original colored"></i>
+      <i class="devicon-linux-plain colored"></i>
+      <i class="devicon-react-original colored"></i>
+            
+      <i class="devicon-mongodb-plain-wordmark colored"></i>
+      
+      <i class="devicon-postgresql-plain colored"></i>
+    
+      <i class="devicon-npm-original-wordmark colored"></i>
+      
+      <i class="devicon-mysql-plain-wordmark colored"></i>
+
+      <i class="devicon-docker-plain-wordmark colored"></i>
+    
+      <i class="devicon-matlab-plain colored"></i>
+     
+      <i class="devicon-numpy-plain colored"></i>
+                     
+                          
+  </div>
+</section>
+
+
+{% endblock %}
