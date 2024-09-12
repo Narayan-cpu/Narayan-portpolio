@@ -23,7 +23,7 @@ packaging==24.1
 pillow==10.4.0
 postgrest==0.16.11
 psycopg==3.2.1
-psycopg2==2.9.9
+
 psycopg2-binary==2.9.9
 pydantic==2.9.1
 pydantic_core==2.23.3
