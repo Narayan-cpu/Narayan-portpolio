@@ -3,30 +3,13 @@
   "builds": [
     {
       "src": "Narayannaik/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      # Consider a more specific route for your main app (e.g., "/" or "/app/*")
-      "src": "/",
+      "src": "/(.*)",
       "dest": "Narayannaik/wsgi.py"
     }
-  ],
-  "functions": {
-    "api/**/*.py": {
-      "maxDuration": 60
-    }
-  },
-  "static": {
-    "src": "static/",  # Assuming your static files are here
-    "dest": "static/"
-  }
+  ]
 }
-
-    
-
