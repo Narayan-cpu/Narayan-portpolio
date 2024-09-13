@@ -17,17 +17,17 @@
             "dest": "Narayannaik/wsgi.py"
         }
     ],
-    "functions": {
+    "functions": [
         "api/**/*.py": {
             "maxDuration": 60
         }
-    },
-    {
-  "static": {
+    ],
+    
+  "static": [
     "src": "staticfiles/",
     "dest": "static/"
-  }
-}
+  ]
+
 
 }
 
