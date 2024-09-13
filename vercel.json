@@ -21,7 +21,14 @@
         "api/**/*.py": {
             "maxDuration": 60
         }
-    }
+    },
+    {
+  "static": {
+    "src": "staticfiles/",
+    "dest": "static/"
+  }
+}
+
 }
 
     
