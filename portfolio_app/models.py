@@ -3,6 +3,8 @@ from django.db import models
 
 
 class Project(models.Model):
+    class Meta:
+        db_table = 'portfolio_app_project'
     title = models.CharField(max_length=200)
     description = models.TextField()
     image = models.ImageField(upload_to='projects/')  # Requires media settings
