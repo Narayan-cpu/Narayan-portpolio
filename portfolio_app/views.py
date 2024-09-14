@@ -12,7 +12,7 @@ def about(request):
     return render(request, 'portfolio_app/about.html')
 
 def projects_view(request):
-    projects = Project.objects.only('title')  # Select only necessary fields
+    projects = Project.objects.only.all()  # Select only necessary fields
     return render(request, 'portfolio_app/projects.html', {'projects': projects})
 
 
