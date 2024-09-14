@@ -12,8 +12,9 @@ def about(request):
     return render(request, 'portfolio_app/about.html')
 
 def projects_view(request):
-    projects = Project.objects.only.all()  # Select only necessary fields
+    projects = Project.objects.select_related('portfolio_app_project').all()
     return render(request, 'portfolio_app/projects.html', {'projects': projects})
+
 
 
 from django.shortcuts import render, redirect
