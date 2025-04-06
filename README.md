@@ -1,4 +1,5 @@
 
+```markdown
 # Portfolio Website
 
 Welcome to my portfolio website! This project showcases my journey into web development using Django and Supabase. This is my first portfolio website and I'm excited to share it with you.
@@ -66,6 +67,6 @@ thenarayannaik.live
 ---
 
 Thank you for visiting my portfolio website!
-```
 
-Feel free to modify this template to better suit your needs and add any additional information you think is important.
+**Reminder**: This project was built a year ago, and some dependencies may be deprecated.
+```
